@@ -171,6 +171,7 @@ contract Safe is
             txHash = keccak256(txHashData);
             checkSignatures(txHash, txHashData, signatures);
         }
+
         address guard = getGuard();
         {
             if (guard != address(0)) {
